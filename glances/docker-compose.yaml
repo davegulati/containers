@@ -1,0 +1,12 @@
+services:
+  Glances:
+    image: nicolargo/glances:latest
+    container_name: Glances
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    pid: host
+    restart: unless-stopped
+    environment:
+      - "GLANCES_OPT=-w"
+    ports:
+      - 61208:61208

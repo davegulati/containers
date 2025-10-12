@@ -1,0 +1,12 @@
+services:
+  Portainer:
+    container_name: Portainer
+    image: portainer/portainer-ce
+    restart: always
+    ports:
+      - "9000:9000/tcp"
+    environment:
+      - TZ=Australia/Sydney
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/Docker/Portainer:/data

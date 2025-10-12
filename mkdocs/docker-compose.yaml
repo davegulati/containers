@@ -1,0 +1,10 @@
+services:
+  mkdocs:
+    build: ./MkDocs
+    container_name: homelab-docs
+    ports:
+      - "8081:8000"
+    volumes:
+      - /opt/Docker/MkDocs/docs:/app/docs
+      - /opt/Docker/MkDocs/mkdocs.yml:/app/mkdocs.yml
+    restart: unless-stopped
