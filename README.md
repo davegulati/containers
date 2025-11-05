@@ -1,7 +1,7 @@
 # containers
 
 A collection of Docker Compose configurations for the services I run locally or on my home lab.  
-Each service lives in its own folder with its own `docker-compose.yml` file and environment configuration.
+Each service lives in its own folder with its own `compose.yml` file and environment configuration.
 
 - [containers](#containers)
   - [🧩 Overview](#-overview)
