@@ -1,0 +1,27 @@
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    ports:
+      - 32400:32400/tcp
+      - 3005:3005/tcp
+      - 8324:8324/tcp
+      - 32469:32469/tcp
+      - 1900:1900/udp
+      - 32410:32410/udp
+      - 32412:32412/udp
+      - 32413:32413/udp
+      - 32414:32414/udp
+    environment:
+      - PUID=3003
+      - PGID=3007
+      - TZ=Australia/Sydney
+      - VERSION=docker
+      - PLEX_CLAIM=claim-XLfwyzxzXCE7kcxURxsH
+      - PLEX_SERVER_NAME=gh5
+      - ADVERTISED_NETWORK=10.69.1.15/24
+    volumes:
+      - /mnt/GNAS1P1/Applications/Plex/Configuration:/configuration
+      - /mnt/GNAS1P1/Applications/Plex/Data:/data
+      - /mnt/GNAS1P1/Applications/Plex/Logs:/logs
+    restart: unless-stopped
