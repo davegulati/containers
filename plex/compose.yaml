@@ -21,7 +21,7 @@ services:
       - PLEX_SERVER_NAME=gh5
       - ADVERTISED_NETWORK=10.69.1.15/24
     volumes:
-      - /mnt/GNAS1P1/Applications/Plex/Configuration:/configuration
+      - /mnt/GNAS1P1/Applications/Plex/Configuration:/config
       - /mnt/GNAS1P1/Applications/Plex/Data:/data
       - /mnt/GNAS1P1/Applications/Plex/Logs:/logs
     restart: unless-stopped
